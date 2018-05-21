@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/common/basePath.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>申请社团状态</title>
+
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+    .dropmenu{
+        font-size: 16px;
+    }
+    .menu{
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .formtable{
+        width: 100%;
+    }
+    .formtable th{
+        font-size: 14px;
+        line-height: 40px;
+        width: 50%;
+        font-weight: bold;
+        text-align: right;
+        padding-right: 10px;
+    }
+</style>
+<body>
+<div >
+    <div class="col-lg-12 col-md-12 container">
+        <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 10px;">
+            <!--申请社团内容-->
+            <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 5px;">
+
+                <!--社团申请状态-->
+                <div class="tab-pane col-lg-12 col-md-12 nopadding active" id="stsqzt" style="margin-bottom: 0px;">
+                    <form action="">
+                        <!--xxx社团申请状态-->
+                        <div class="col-lg-12 col-md-12 nopadding">
+                            <hr>
+                        </div>
+                        <table id="tt" class="col-lg-12 col-md-12 nopadding formtable">
+                            <tr>
+                                <th>社团名称</th>
+                                <td id="stmc"></td>
+                            </tr>
+                            <tr>
+                                <th>社团类型</th>
+                                <td id="type"></td>
+                            </tr>
+                            <tr>
+                                <th>挂靠部门</th>
+                                <td id="gkbm"></td>
+                            </tr>
+                            <tr>
+                                <th>发起人</th>
+                                <td id="fqr"></td>
+                            </tr>
+                            <tr>
+                                <th>指导老师</th>
+                                <td id="teacher"></td>
+                            </tr>
+                            <tr>
+                                <th>指导教师审核</th>
+                                <td id="tutorCheck"></td>
+                            </tr>
+                            <tr>
+                                <th>挂靠部门审核</th>
+                                <td id="collegeCheck"></td>
+                            </tr>
+                            <tr>
+                                <th>校团委审核</th>
+                                <td id="universityCheck"></td>
+                            </tr>
+                            <tr>
+                                <th>校学生会审核</th>
+                                <td id="communityCheck"></td>
+                            </tr>
+                            <tr>
+                                <th>社团简介</th>
+                                <td id="ssjj"><p>无</p></td>
+                            </tr>
+                            <tr>
+                                <th>发起人简介</th>
+                                <td id="fqrjj"><p>无</p></td>
+                            </tr>
+                            <tr>
+                                <th>社团宗旨</th>
+                                <td id="stzz"><p>无</p></td>
+                            </tr>
+                            <tr>
+                                <th>审批意见</th>
+                                <td id="spyj">无</td>
+                            </tr>
+
+                        </table>
+                        <table class="col-lg-12 col-md-12 nopadding formtable">
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <input class="btn-danger" type="button"  onclick="window.close();" value="关闭" style="width: 80px;height: 30px;border-radius: 3px">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 nopadding">
+                <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                    <div class="col-md-12 nopadding">
+                        <hr style="background-color: #ce8483;border: none;height: 2px">
+                        <h6>电话：023-62652361</h6>
+                        <h6>地址：重庆市南岸区学府大道66号</h6>
+                        <h6>&copy; 2017 重庆交通大学</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    $(document).ready(function(){
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function(){
+        dropdownOpen();//调用
+    });
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function() {
+            $(this).addClass('open');
+        }).mouseout(function() {
+            $(this).removeClass('open');
+        });
+    }
+</script>
+<script>
+    function getComDetail() {
+        var url = window.location + "";
+        var COMID = url.substring(url.indexOf("comId=") + 6);
+        var success = "通过";
+        var uncheck = "未审核";
+        var unsuccess = "驳回";
+
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            xhrFields: {
+                withCredentials: true
+            },
+            "url": COMMONPATH + "myCommunity/community/" + COMID,
+            "method": "GET"
+        }).then(
+            function (data) {
+                if (data.status == "0") {
+                    var myData = data.data;
+                    console.log(myData);
+                    status = parseInt(myData.status);
+                    tutorCheck = (Math.abs(status) == 0 ? uncheck : status == -1 ? unsuccess : success);
+                    collegeCheck = (Math.abs(status) < 1 ? uncheck : Math.abs(status) == 1 ? uncheck : status == -2 ? unsuccess : success);
+                    communityCheck = (Math.abs(status) < 2 ? uncheck : Math.abs(status) == 2 ? uncheck : status == -3 ? unsuccess : success);
+                    universityCheck = (Math.abs(status) < 3 ? uncheck : Math.abs(status) == 3 ? uncheck : status == -4 ? unsuccess : success);
+                    $("#stmc").text(myData.name);
+                    $("#type").text(myData.typeName);
+                    $("#gkbm").text(myData.collegeName);
+                    $("#fqr").text(myData.promoterName);
+                    $("#teacher").text(myData.tutorName);
+                    $("#tutorCheck").text(tutorCheck);
+                    $("#collegeCheck").text(collegeCheck);
+                    $("#communityCheck").text(communityCheck);
+                    $("#universityCheck").text(universityCheck);
+                    if(myData.communityDetail!=="" && myData.communityDetail!==null){
+                        $("#ssjj p").remove();
+                        var sttrs = "<a style='color:blue' href="+COMMONPATH+"myCommunity/downloadCommuntiyDetail/"+myData.id+">下载</a>"
+                        $("#ssjj").append(sttrs);
+                    }
+                    if(myData.promoterDetail!=="" && myData.promoterDetail!==null){
+                        $("#fqrjj p").remove();
+                        var fqtrs = "<a style='color:blue' href="+COMMONPATH+"myCommunity/downloadPromoterDetail/"+myData.id+">下载</a>"
+                        $("#fqrjj").append(fqtrs);
+                    }
+                    if(myData.regulation!=="" && myData.regulation!==null){
+                        $("#stzz p").remove();
+                        var stzztrs = "<a style='color:blue' href="+COMMONPATH+"myCommunity/downloadRegulation/"+ myData.id +">下载</a>"
+                        $("#stzz").append(stzztrs);
+                    }
+                    if(myData.status == "-1" || myData.status == "-2" || myData.status == "-3" || myData.status == "-4"){
+                        if(myData.checkOpinion !== null){
+                            $("#spyj").text(myData.checkOpinion);
+                        }
+                    }
+                } else {
+                    layer.msg("不好了，好像出错了呢！");
+                }
+            },
+            function (error) {
+                layer.msg(error);
+            }
+        );
+    }
+    getComDetail();
+</script>
+
+</body>
+</html>

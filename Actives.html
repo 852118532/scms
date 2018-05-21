@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/common/basePath.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>社团活动</title>
+
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+    .dropmenu{
+        font-size: 16px;
+    }
+    .menu{
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .formtable{
+        width: 100%;
+    }
+    .formtable th{
+        font-size: 14px;
+        line-height: 40px;
+        width: 50%;
+        font-weight: bold;
+        text-align: right;
+        padding-right: 10px;
+    }
+</style>
+<body>
+<div >
+    <div class="col-lg-12 col-md-12 container">
+        <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 10px;">
+            <!--活动-->
+            <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 5px;">
+
+                <!--活动信息-->
+                <div class="tab-pane col-lg-12 col-md-12 nopadding active" id="hdxx" style="margin-bottom: 0px;">
+                    <form action="">
+                        <!--xxx活动-->
+                        <div class="col-lg-12 col-md-12 nopadding">
+                            <hr>
+                        </div>
+                        <table class="col-lg-12 col-md-12 nopadding formtable">
+                            <tr>
+                                <th>活动主题</th>
+                                <td id="theme"></td>
+                            </tr>
+                            <tr>
+                                <th>学院</th>
+                                <td id="collegeName"></td>
+                            </tr>
+                            <tr>
+                                <th>组织社团</th>
+                                <td id="communityName"></td>
+                            </tr>
+                            <tr>
+                                <th>活动时间</th>
+                                <td id="startTime"></td>
+                            </tr>
+                            <tr>
+                                <th>活动地点</th>
+                                <td id="loca"></td>
+                            </tr>
+                            <tr>
+                                <th>负责人</th>
+                                <td id="createBy"></td>
+                            </tr>
+                            <tr>
+                                <th>负责人手机</th>
+                                <td id="tel"></td>
+                            </tr>
+                            <tr>
+                                <th valign="top">活动内容</th>
+                                <td id="content">
+                                    <!--
+                                    <p><span class="glyphicon glyphicon-erase"></span><strong>活动背景</strong></p>
+                                    <p>xxxx</p>
+                                    <p><span class="glyphicon glyphicon-erase"></span><strong>活动目的</strong></p>
+                                    <p>xxxx</p>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="width: 40%">
+                                    <input class="btn-danger" type="button"  onclick="window.close();" value="关闭" style="width: 80px;height: 30px;border-radius: 3px">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 nopadding">
+                <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                    <div class="col-md-12 nopadding">
+                        <hr style="background-color: #ce8483;border: none;height: 2px">
+                        <h6>电话：023-62652361</h6>
+                        <h6>地址：重庆市南岸区学府大道66号</h6>
+                        <h6>&copy; 2017 重庆交通大学</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(document).ready(function(){
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function(){
+        dropdownOpen();//调用
+    });
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function() {
+            $(this).addClass('open');
+        }).mouseout(function() {
+            $(this).removeClass('open');
+        });
+    }
+    function getActivesDetail(){
+        var url = window.location + "";
+        var ActiveId = url.substring(url.indexOf("ActiveId=") + 9);
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            xhrFields: {
+                withCredentials: true
+            },
+            "url": COMMONPATH + "myCommunity/activity/" + ActiveId,
+            "method": "GET"
+        }).then(
+            function (data) {
+                if (data.status == "0") {
+                    var myData = data.data;
+                    console.log(myData);
+                    $("#communityName").text(myData.communityName);
+                    $("#collegeName").text(myData.collegeName);
+                    $("#theme").text(myData.theme);
+                    $("#startTime").text(myData.startTime);
+                    $("#loca").text(myData.location);
+                    $("#createBy").text(myData.createBy);
+                    $("#tel").text(myData.tel);
+                    $("#content").append(myData.content);
+                } else {
+                    layer.msg("不好了，好像出错了呢！");
+                }
+            },
+            function (error) {
+                layer.msg(error);
+            }
+        );
+    }
+    getActivesDetail();
+</script>
+</body>
+</html>

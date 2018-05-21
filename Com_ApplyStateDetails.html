@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>申请社团状态</title>
+
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    .foot{
+        width: 100%;
+        height:50px;
+        background-color: #c7ddef;
+        margin-top: 10px;
+
+    }
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+    .dropmenu{
+        font-size: 16px;
+    }
+    .menu{
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .formtable{
+        width: 100%;
+    }
+    .formtable th{
+        font-size: 14px;
+        line-height: 40px;
+        width: 50%;
+        font-weight: bold;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+</style>
+<body>
+<div>
+
+    <div class="col-lg-12 col-md-12 container">
+        <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 10px;">
+            <div class="col-lg-2 col-md-2 nopadding" style="margin-bottom: 10px;">
+                <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                    <h3>申请社团</h3>
+                    <hr>
+                </div>
+                <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                    <ul class="list-group" role="tablist" >
+                        <li class="list-group-item"><a href="ComApply.html" ><p style="font-size: 16px">社团申请</p></a></li>
+                        <li class="list-group-item active"><a href="ComApply_State.html" ><p style="font-size: 16px">社团申请状态</p></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-10 col-lg-10 nopadding" >
+
+                <div class="col-lg-12 col-md-12 nopadding" style="height: 250px">
+                    <img class="matchparent" src="img/stsq.jpg"  alt=""/>
+                </div>
+
+                <!--申请社团内容-->
+                <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 5px;">
+
+                    <!--社团申请-->
+                    <div class="tab-pane col-lg-12 col-md-12 nopadding " id="stsq" style="margin-bottom: 0px;">
+                        <form action="">
+                            <div class="col-lg-12 col-md-12 nopadding" style="margin-top: 10px">
+                                <p><h4>社团申请</h4></p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <hr>
+                            </div>
+                            <!--填写社团名称-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">社团名称</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写社团名称"/></p>
+                                </div>
+                            </div>
+                            <!--社团类型-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">社团类型</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><select id="apply-community-type" style="height: 28px;width: 175px">
+                                        <option value="">请选择社团类型</option>
+                                        <option value="1">社会公益型</option>
+                                        <option value="2">学术型</option>
+                                        <option value="3">文体娱乐型</option>
+                                        <option value="4">文体艺术型</option>
+                                        <option value="5">实践应用型</option>
+                                    </select></p>
+                                </div>
+                            </div>
+                            <!--社团挂靠部门-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">挂靠部门</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><select id="apply-community-college" style="height: 28px;width: 175px">
+                                        <option value="">请选择挂靠单位</option>
+                                        <option value="1">土木工程学院</option>
+                                        <option value="2">河海学院</option>
+                                        <option value="3">交通运输学院</option>
+                                        <option value="4">机电与车辆工程学院</option>
+                                        <option value="5">航运与船舶工程学院</option>
+                                        <option value="6">建筑与城市规划学院</option>
+                                        <option value="7">信息科学与工程学院</option>
+                                        <option value="8">材料科学与工程学院</option>
+                                        <option value="9">经济与管理学院</option>
+                                        <option value="10">数学与统计学院</option>
+                                        <option value="11">外国语学院</option>
+                                        <option value="12">人文学院</option>
+                                        <option value="13">马克思主义学院</option>
+                                        <option value="14">国际学院</option>
+                                        <option value="15">马蒂亚斯国际设计学院</option>
+                                        <option value="16">应用技术学院</option>
+                                    </select></p>
+                                </div>
+                            </div>
+                            <!--发起人姓名-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">发起人姓名</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写发起人姓名"/></p>
+                                </div>
+                            </div>
+                            <!--发起人手机-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">发起人手机</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写发起人手机"/></p>
+                                </div>
+                            </div>
+                            <!--email-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">Email</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写Email"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--指导教师姓名-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">指导教师姓名</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写指导教师姓名"/></p>
+                                </div>
+                            </div>
+                            <!--指导教师电话-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">指导教师电话</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="text" placeholder="请填写指导教师电话"/></p>
+                                </div>
+                            </div>
+                            <!--社团宗旨-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">社团宗旨</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><textarea id="apply-community-purpose" rows="4" cols="6" style="width:300px"></textarea></p>
+                                </div>
+                            </div>
+                            <!--社团简介-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">社团简介</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="file" /></p>
+                                </div>
+                            </div>
+                            <!--发起人简介-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">发起人简介</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="file" /></p>
+                                </div>
+                            </div>
+                            <!--指导教师简介-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">指导教师简介</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="file" /></p>
+                                </div>
+                            </div>
+                            <!--社团章程-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+                                    <p style="float: right">社团章程</p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input type="file" /></p>
+                                </div>
+                            </div>
+                            <!--提交申请-->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="col-lg-5 col-md-5">
+
+                                </div>
+                                <div class="col-lg-7 col-md-7 nopadding">
+                                    <p><input class="btn-success" type="submit" value="提交申请" style="border-radius: 3px;width: 90px;height:40px" /></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--社团申请状态-->
+                    <div class="tab-pane col-lg-12 col-md-12 nopadding active" id="stsqzt" style="margin-bottom: 0px;">
+                        <form action="">
+                            <!--xxx社团申请状态-->
+                            <div class="col-lg-12 col-md-12 nopadding" style="margin-top: 10px">
+                                <p><input type="text" style="background: transparent;border:none;font-size: 16px" value="xxxx社团申请状态"/></p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <hr>
+                            </div>
+                            <table class="col-lg-12 col-md-12 nopadding formtable">
+                                <tr>
+                                    <th>社团名称</th>
+                                    <td>xxx社团</td>
+                                </tr>
+                                <tr>
+                                    <th>社团类型</th>
+                                    <td>社会公益型</td>
+                                </tr>
+                                <tr>
+                                    <th>挂靠部门</th>
+                                    <td>土木工程学院</td>
+                                </tr>
+                                <tr>
+                                    <th>发起人</th>
+                                    <td>谁谁谁</td>
+                                </tr>
+                                <tr>
+                                    <th>指导老师</th>
+                                    <td>李老师</td>
+                                </tr>
+                                <tr>
+                                    <th>社团简介</th>
+                                    <td>下载</td>
+                                </tr>
+                                <tr>
+                                    <th>指导教师审核</th>
+                                    <td>通过</td>
+                                </tr>
+                                <tr>
+                                    <th>挂靠部门审核</th>
+                                    <td>通过</td>
+                                </tr>
+                                <tr>
+                                    <th>校团委审核</th>
+                                    <td>通过</td>
+                                </tr>
+                                <tr>
+                                    <th>校学生会审核</th>
+                                    <td>通过</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input class="btn-danger" type="button" name="Submit" onclick="loadPage('ComApply_State.html')" value="返回" style="width: 80px;height: 30px;border-radius: 3px">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-12 col-md-12 nopadding">
+                <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                    <div class="col-md-12 nopadding">
+                        <hr style="background-color: #ce8483;border: none;height: 2px">
+                        <h6>电话：023-62652361</h6>
+                        <h6>地址：重庆市南岸区学府大道66号</h6>
+                        <h6>&copy; 2017 重庆交通大学</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    $(document).ready(function(){
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function(){
+        dropdownOpen();//调用
+    });
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function() {
+            $(this).addClass('open');
+        }).mouseout(function() {
+            $(this).removeClass('open');
+        });
+    }
+</script>
+</body>
+</html>

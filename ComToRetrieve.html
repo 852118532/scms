@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/common/jqPaginator.js"></script>
+    <script type="text/javascript" src="./static/js/community/ComToRetrieve.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>社团检索</title>
+
+</head>
+<style>
+    body {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    label {
+        font-weight: normal;
+        margin-right: 15px;
+    }
+
+    .nopadding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .globalLoginBtn {
+        display: block;
+        padding: 0 18px;
+        color: #000000;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<div>
+
+    <div class="col-lg-12 col-md-12 container">
+
+
+        <!--查询条件-->
+        <div class="col-lg-12 col-md-12 nopadding container">
+            <!--社团类别-->
+            <div class="col-md-12 col-lg-12 nopadding" style="margin-top:10px">
+                <div class="col-lg-12 col-md-12 nopadding">
+                    <div class="col-lg-2 col-md-2">
+                        <p>社团类别：</p>
+                    </div>
+                    <div id="comtype" class="col-lg-10 col-md-10 nopadding" style="margin-top:10px;">
+                        <input type="radio" name="community_category" id="radio_0" value="" checked="checked"/>
+                        <label for="radio_0"> 全部</label>
+                    </div>
+
+                </div>
+            </div>
+            <!--挂靠部门-->
+            <div class="col-md-12 col-lg-12 nopadding" style="margin-top:10px">
+                <div class="col-lg-12 col-md-12 nopadding">
+                    <div class="col-lg-2 col-md-2">
+                        <p>挂靠部门：</p>
+                    </div>
+                    <div class="col-lg-10 col-md-10 nopadding" style="padding-top: 7px">
+                        <select id="organization" name="organization" style="height: 28px;width: 175px">
+                            <option value="">----------请选择学院-------</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <!--社团名称-->
+            <div class="col-md-12 col-lg-12 nopadding" style="margin-top:10px">
+                <div class="col-lg-12 col-md-12 nopadding">
+                    <div class="col-lg-2 col-md-2">
+                        <p>社团名称：</p>
+                    </div>
+                    <div class="col-lg-10 col-md-10 nopadding" style="padding-top: 7px">
+                        <input id="comname" type="text"/>
+                        <button id="aa" type="button">确认</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12 container nopadding">
+
+            <table id="stxx" class="table" style="text-align: center">
+                <tr>
+                    <td>社团名称</td>
+                    <td>类别</td>
+                    <td>挂靠单位</td>
+                    <td>建团时间</td>
+                    <td>简介</td>
+                    <td>申请</td>
+                </tr>
+                <!--
+                <tr class = "bb">
+                    <td>社团名称</td>
+                    <td>类别</td>
+                    <td>挂靠单位</td>
+                    <td>建团时间</td>
+                    <td>简介</td>
+                    <td><a class="globalLoginBtn">申请</a></td>
+                </tr>
+                <tr class = "bb">
+                    <td>社团名称</td>
+                    <td>类别</td>
+                    <td>挂靠单位</td>
+                    <td>建团时间</td>
+                    <td>简介</td>
+                    <td><a class="globalLoginBtn">申请</a></td>
+                </tr>
+                -->
+            </table>
+            <table id="table pagination" class="table table-bordered">
+                <tr>
+                    <td class="nopadding" colspan="7" style="text-align: center;">
+                        <div id="pagenav">
+                            <ul id="pagination1" class="pagination"></ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="col-lg-12 col-md-12 nopadding">
+            <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                <div class="col-md-12 nopadding">
+                    <hr style="background-color: #ce8483;border: none;height: 2px">
+                    <h6>电话：023-62652361</h6>
+                    <h6>地址：重庆市南岸区学府大道66号</h6>
+                    <h6>&copy; 2018 重庆交通大学</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--模态框-->
+    <div id="loginModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input type="text" class="form-control" id="username" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" class="form-control" id="password" placeholder="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">登录</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function () {
+        dropdownOpen();//调用
+    });
+
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function () {
+            $(this).addClass('open');
+        }).mouseout(function () {
+            $(this).removeClass('open');
+        });
+    }
+
+</script>
+<script>
+    function getColleges() {
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            xhrFields: {
+                withCredentials: true
+            },
+            "url": COMMONPATH + "sys/myEnum?action=QueryEnumItem&itemCode=COLLEGE",
+            "method": "GET"
+        }).then(
+            function (data) {
+                var colleges = data.data;
+                var selects = "";
+                for (var i = 0; i < colleges.length; i++) {
+                    selects += "<option value='" + colleges[i].id + "'>" + colleges[i].valueName + "</option>"
+                }
+                $("#organization").append(selects);
+            }, function (error) {
+                console.log(error);
+            }
+        );
+    }
+    getColleges();
+
+    //加载社团类型下拉列表
+    function getCommunityType() {
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            xhrFields: {
+                withCredentials: true
+            },
+            "url": COMMONPATH + "sys/myEnum?action=QueryClassParam&itemCode=community_type",
+            "method": "GET"
+        }).then(
+            function (data) {
+                var colleges = data.data;
+                var trs = "";
+                for (var i = 0; i < colleges.length; i++) {
+                    trs += "<input type=\"radio\" name=\"community_category\" id=\"radio_"+ colleges[i].dataValue +"\" value=\""+ colleges[i].dataValue +"\"/>"
+                    trs += "<label for=\"radio_\"+ colleges[i].dataValue +\"\">"+colleges[i].valueName +"</label>"
+                }
+                $("#comtype").append(trs);
+            }, function (error) {
+                console.log(error);
+            }
+        );
+    }
+    getCommunityType();
+    showCoumunityWithPages();
+</script>
+</body>
+</html>

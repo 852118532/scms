@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>个人设置</title>
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-top: 10px;
+    }
+
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+
+    input{
+        border-radius: 3px;
+        background: transparent;
+        padding: 0 10px;
+        height: 30px;
+    }
+
+
+</style>
+<body>
+<div>
+
+    <div class="col-md-12 col-lg-12 nopadding " style="margin-top: 10px;">
+        <div class="col-lg-2 col-md-2 nopadding" style="margin-bottom: 10px;background-color: #f9f9f9">
+            <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                <h4>个人设置</h4>
+                <hr>
+            </div>
+            <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                <ul class="list-group" role="tablist" id="tab-list" >
+                    <li class="list-group-item active" ><a href="#xxsz" role="tab" data-toggle="tab"><p style="font-size: 16px">信息设置</p></a></li>
+                    <li class="list-group-item" ><a href="#mmxg" role="tab" data-toggle="tab"><p style="font-size: 16px">密码修改</p></a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+        <div class="col-md-10 col-lg-10 nopadding" >
+
+            <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 5px;">
+                <!--个人信息修改-->
+                <div class="tab-pane col-lg-12 col-md-12 active" id="xxsz" style="margin-bottom: 20px;margin-top: 30px">
+                    <div class="col-lg-3 col-md-3 nopadding"></div>
+                    <div class="col-lg-6 col-md-6 nopadding form-inline-input">
+                        <!--姓名-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>姓名</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input   type="text" value="xxx" disabled></p>
+                            </div>
+                        </div>
+                        <!--学号-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>学号</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="text" value="xxx" disabled/></p>
+                            </div>
+                        </div>
+                        <!--学院-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>学院</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="text" value="xxx" disabled/></p>
+                            </div>
+                        </div>
+                        <!--班级-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>班级</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="text" value="xxx" disabled/></p>
+                            </div>
+                        </div>
+                        <!--电话-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>电话</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input id="oText" type="text" placeholder="请输入电话"/></p>
+                            </div>
+                        </div>
+                        <!--邮箱-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>Email</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="email" value="" placeholder="请输入邮箱"/></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input class="btn btn-success" type="submit" style="width: 100px"/></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 nopadding"></div>
+                </div>
+
+                <!--密码修改-->
+                <div class="tab-pane col-lg-12 col-md-12 nopadding " id="mmxg" style="margin-bottom: 20px;margin-top: 30px">
+                    <div class="col-lg-3 col-md-3 nopadding"></div>
+                    <div class="col-lg-6 col-md-6 nopadding form-inline-input">
+                        <!--原密码-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>原密码</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input   type="text" placeholder="请输入原密码"></p>
+                            </div>
+                        </div>
+                        <!--新密码-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>新密码</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="text" placeholder="请输入新密码"/></p>
+                            </div>
+                        </div>
+                        <!--确认新密码-->
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+                                <p>确认新密码</p>
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input type="text" placeholder="请确认新密码"/></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 nopadidng">
+                            <div class="col-md-3 col-lg-3">
+
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <p><input class="btn btn-success" type="submit" style="width: 100px"/></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 nopadding"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-12 col-md-12 nopadding">
+        <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+            <div class="col-md-12 nopadding">
+                <hr style="background-color: #ce8483;border: none;height: 2px">
+                <h6>电话：023-62652361</h6>
+                <h6>地址：重庆市南岸区学府大道66号</h6>
+                <h6>&copy; 2017 重庆交通大学</h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+
+    $(document).ready(function(){
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function(){
+        dropdownOpen();//调用
+    });
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function() {
+            $(this).addClass('open');
+        }).mouseout(function() {
+            $(this).removeClass('open');
+        });
+    }
+</script>
+</body>
+</html>

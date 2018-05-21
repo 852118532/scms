@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/community/comExpress_notice.js"></script>
+    <script type="text/javascript" src="./static/js/common/jqPaginator.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>社团快讯</title>
+
+</head>
+<style>
+    body {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    .nopadding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+</style>
+<body>
+<div>
+
+    <div class="col-lg-12 col-md-12 container">
+
+
+        <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 10px;">
+            <div class="col-lg-2 col-md-2 nopadding" style="margin-bottom: 10px;background-color: #f9f9f9">
+                <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                    <h3>社团快讯</h3>
+                    <hr>
+                </div>
+                <div class="container col-md-12 col-lg-12 nopadding" style="text-align: center">
+                    <ul class="list-group">
+                        <li class="list-group-item active"><a onclick="loadPage('ComExpress_Notice.html')"><p
+                                style="font-size: 16px">公告</p></a></li>
+                        <li class="list-group-item"><a onclick="loadPage('ComExpress_Active.html')"><p
+                                style="font-size: 16px">活动</p></a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="col-md-10 col-lg-10 nopadding">
+
+                <div class="col-lg-12 col-md-12 nopadding" style="height: 250px">
+                    <img class="matchparent" src="img/stkx.jpg" alt=""/>
+                </div>
+
+                <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 10px;">
+                    <!--社团公告-->
+                    <div class="tab-pane col-lg-12 col-md-12  nopadding active" id="stgg"
+                         style="margin-bottom: 0px; margin-top: 5px">
+                        <div class="col-lg-12 col-md-12">
+                            <h4><strong>公告</strong></h4>
+                        </div>
+                        <table id="gg" class="table col-lg-12 col-md-12">
+                            <tr>
+                                <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                <td align="right">2018-5-10</td>
+                            </tr>
+                            <tr>
+                                <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                <td align="right">2018-5-10</td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                <td align="right">2018-5-10</td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                <td align="right">2018-5-10</td>
+                            </tr>
+                            <tr>
+                                <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                <td align="right">2018-5-10</td>
+                            </tr>
+                        </table>
+                        <table id="table pagination" class="table  col-lg-12 col-md-12">
+                            <tr>
+                                <td class="nopadding" colspan="7" style="text-align: center;">
+                                    <div id="pagenav">
+                                        <ul id="pagination1" class="pagination"></ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--社团活动-->
+                    <div class="tab-pane col-lg-12 col-md-12 nopadding " id="sthd"
+                         style="margin-bottom: 0px;margin-top: 5px">
+                        <div class="col-lg-12 col-md-12">
+                            <h4><strong>活动</strong></h4>
+                        </div>
+                        <form action="">
+                            <table class="table col-lg-12 col-md-12">
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">xx活动</a></td>
+                                    <td align="right">2018-5-10</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                    <td align="right">2018-5-10</td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                    <td align="right">2018-5-10</td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                    <td align="right">2018-5-10</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">社团招新</a></td>
+                                    <td align="right">2018-5-10</td>
+                                </tr>
+
+                            </table>
+                            <table class="table">
+                                <tr>
+                                    <td class="nopadding" colspan="2" style="text-align: center;">
+                                        <ul class="pagination " style="margin-top: 5px;margin-bottom: 0px">
+                                            <li><a href="#">&laquo;</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12 col-md-12 nopadding">
+            <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                <div class="col-md-12 nopadding">
+                    <hr style="background-color: #ce8483;border: none;height: 2px">
+                    <h6>电话：023-62652361</h6>
+                    <h6>地址：重庆市南岸区学府大道66号</h6>
+                    <h6>&copy; 2018 重庆交通大学</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+
+    $(document).ready(function () {
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function () {
+        dropdownOpen();//调用
+    });
+
+    /**
+     * 鼠标划过就展开子菜单，免得需要点击才能展开
+     */
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function () {
+            $(this).addClass('open');
+        }).mouseout(function () {
+            $(this).removeClass('open');
+        });
+    }
+
+    //查询公告
+    showNoticeWithPages();
+
+</script>
+</body>
+</html>

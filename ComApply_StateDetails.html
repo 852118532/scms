@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>社团申请状态详情</title>
+
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-top: 10px;
+    }
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+</style>
+<body onload="loadPage('ApplyStateDetails.html')">
+<div class="container">
+    <div class="col-lg-12 col-md-12 nopadding">
+        <div class="col-md-6 col-lg-6 " >
+            <img src="img/stlogo.png" alt="" >
+        </div>
+        <div class="col-md-3 col-lg-3 nopadding"></div>
+        <div class="col-md-3 col-lg-3  nopadding" >
+
+            <div class="col-lg-6 col-md-6 nopadding" style="text-align: center">
+            </div>
+
+            <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 10px;">
+                <!--登录-->
+                <div class="col-lg-4 col-md-4 " >
+                    <p ><a href="http://120.79.243.76:8080/MyCommunityManagerWeb/pages/login.html"><span class="glyphicon glyphicon-user"></span></a></p>
+                </div>
+                <!--个人设置-->
+                <div class="col-lg-4 col-md-4 "  >
+                    <p><a onclick="loadPage('PersonalSettings.html')"><span class="glyphicon glyphicon-cog"></span></a></p>
+                </div>
+                <!--退出登录-->
+                <div class="col-lg-4 col-md-4 " >
+                    <p><a onclick="loadPage('StIndex.html')"><span class="glyphicon glyphicon-off"></span></a></p>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 container nopadding" style="margin-top: 10px;">
+                <div class="col-lg-9 col-md-9 nopadding col-md-offset-3 col-lg-offset-3">
+                    <input type="text" placeholder="搜索" /><a href="#"><img src="img/ss.gif"/></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--导航栏-->
+    <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 5px; ">
+        <table class="col-lg-12 col-md-12 nopadding" style="background-color:#2e6da4">
+            <tr>
+                <td>
+                    <ul id="nav" style="margin: 0; padding-left: 95px; border: 0; z-index:999;position: relative; color: white">
+                        <li>
+                            <a onclick="loadPage('StIndex.html')">首页</a>
+                        </li>
+                        <li>
+                            <a onclick="loadPage('ComExpress_Notice.html')">社团快讯</a>
+                            <ul style="margin: 0; padding: 0; border: 0;">
+                                <li style="margin: 0; padding: 0; border: 0;" ><a  onclick="loadPage('ComExpress_Notice.html')">公告</a></li>
+                                <li style="margin: 0; padding: 0; border: 0;"><a onclick="loadPage('ComExpress_Active.html')">活动</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="loadPage('ComPresence_stljj.html')">社团风采</a>
+                            <ul style="margin: 0; padding: 0; border: 0;">
+                                <li><a onclick="loadPage('ComPresence_stljj.html')">社团联简介</a></li>
+                                <li>
+                                    <a onclick="loadPage('ComPresence_stzl.html')">社团总览
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick="loadPage('ComToRetrieve.html')">社团检索</a>
+                        </li>
+                        <li >
+                            <a onclick="loadPage('ComApply.html')">申请社团</a>
+                            <ul style="margin: 0; padding: 0; border: 0; width: 140px">
+                                <li ><a  onclick="loadPage('ComApply.html')">社团申请</a></li>
+                                <li ><a  onclick="loadPage('ComApply_State.html')">社团申请状态</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="page" class="col-lg-12 col-md-12 nopadding"></div>
+
+</div>
+
+</body>
+<script>
+
+    function loadPage(pageName) {
+        $("#page").load(pageName);
+    }
+
+</script>
+</html>

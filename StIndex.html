@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <title>社团管理系统首页</title>
+
+</head>
+<style>
+    body{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-top: 10px;
+    }
+    .nopadding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .matchparent{
+        width:100%;
+        height:100%;
+        object-fit:fill;
+    }
+</style>
+<body>
+    <div>
+
+        <div class="col-lg-12 col-md-12 nopadding">
+            <!--图片轮播-->
+            <div class="col-lg-12 col-md-12  nopadding " style="height: 350px;margin-top: 10px" >
+                <div id="myCarousel" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner" >
+                        <div class="item active">
+                            <img class="matchparent img-responsive" src="img/publicwelfare.jpg"  alt="社会公益型">
+                        </div>
+                        <div class="item">
+                            <img class="matchparent img-responsive" src="img/academic.jpg"  alt="学术型">
+                        </div>
+                        <div class="item">
+                            <img class="matchparent img-responsive" src="img/entertainment.jpg" alt="文体娱乐型">
+                        </div>
+                        <div class="item">
+                            <img class="matchparent img-responsive" src="img/recreation.jpg" alt="文体艺术型">
+                        </div>
+                        <div class="item">
+                            <img class="matchparent img-responsive" src="img/practical.jpg" alt="实践应用型">
+                        </div>
+                    </div>
+
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12  nopadding" style="margin-top: 10px;">
+                <!--宣传片-->
+                <div class="col-md-4 col-lg-4 nopadding "  >
+                    <video src="video/xcp.MP4" muted="false" style="width:100%;height:100%;object-fit:fill;border: solid"  controls="controls">
+                    </video>
+                </div>
+                <!--社团联公告-->
+                <div class="col-md-8 col-lg-8 nopadding tab-content" style="height: 200px;">
+                    <div class="nav nav-tabs">
+                        <ul class="nav nav-tabs" role="tablist" id="tab-list">
+                            <li ><a href="#stlgg" role="tab" data-toggle="tab"><h4>社团联公告</h4></a></li>
+                            <li ><a href="#stxw" role="tab" data-toggle="tab"><h4>社团新闻</h4></a></li>
+                        </ul>
+                    </div>
+                    <!-- 公告 -->
+                    <div class="tab-pane  col-md-12 col-lg-12 nopadding active" id="stlgg">
+                        <div class="col-md-12 col-lg-12">
+                            <table id="gg" class="col-md-12 col-lg-12 table table-striped ">
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank" >五一放假通知</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank" >五一放假通知</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank" >五一放假通知</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank" >五一放假通知</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 社团新闻 -->
+                    <div class="tab-pane  col-md-12 col-lg-12 nopadding " id="stxw">
+                        <div class="col-md-12 col-lg-12">
+                            <table id="xw" class="col-md-12 col-lg-12 table  table-striped ">
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank" >xxx活动</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="ComNotice.html" target="_blank">xxx活动</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank">xxx活动</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                                <tr >
+                                    <td><a href="ComNotice.html" target="_blank">xxx活动</a></td>
+                                    <td align="right">2018-04-28</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12 nopadding">
+                <hr class="divider">
+            </div>
+
+            <div class="col-lg-12 col-md-12 nopadding" style=" margin-top: 10px">
+                <!--友情链接-->
+                <div class="col-md-4 col-lg-4 nopadding ">
+                    <div class="nav nav-tabs"  style="height: 45px" >
+                        <p class="glyphicon glyphicon-link" >友情链接</p>
+                    </div>
+                    <p ><a href="http://www.cqjtu.edu.cn/">重庆交通大学官网</a></p>
+                    <p ><a href="http://tw.cqjtu.edu.cn/">重庆交通大学团委</a></p>
+                    <p ><a href="http://jw.cqjtu.edu.cn/">重庆交通大学教务处</a></p>
+                    <p ><a href="http://www2.cqjtu.edu.cn/sfgwh/">重庆交通大学双福校区</a></p>
+                    <p ><a href="http://zsjy.cqjtu.edu.cn/">重庆交通大学招生就业处</a></p>
+
+
+                </div>
+                <!--活动预告-->
+                <div class="col-md-8 col-lg-8 nopadding " >
+                    <div class="container col-lg-12 col-md-12">
+                        <div class="col-lg-12 col-md-12 nopadding" >
+                            <ul class="nav nav-tabs" >
+                                <li><h4>活动预告</h4></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container col-lg-12 col-md-12 " >
+                        <div class="col-lg-12 col-md-12  nopadding  " >
+                            <!--图片轮播-->
+                            <div id="myCarousel1" class="carousel slide" style="margin-top: 10px;">
+                                <!-- 轮播（Carousel）项目 -->
+                                <div id="lb" class="carousel-inner" >
+                                    <div class="item active ">
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item  ">
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item  ">
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 " style=" border: 1px solid">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动标题</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动地点</p>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <p>活动时间</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 nopadding">
+                <div class="col-lg-12 nopadding" style="margin-top: 5px;">
+                    <div class="col-md-12 nopadding">
+                        <hr style="background-color: #ce8483;border: none;height: 2px">
+                        <h6>电话：023-62652361</h6>
+                        <h6>地址：重庆市南岸区学府大道66号</h6>
+                        <h6>&copy;2018 重庆交通大学</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    $("#page1").load("ComNav.html");
+    $(function () {
+        $('#myCarousel').carousel({
+            interval: 3000
+
+        });
+
+    });
+    $(function () {
+        $('#myCarousel1').carousel({
+            interval: 5000
+
+        });
+
+    });
+
+    $(document).ready(function(){
+        $(document).off('click.bs.dropdown.data-api');
+    });
+    $(document).ready(function(){
+        dropdownOpen();//调用
+    });
+   /*  鼠标划过就展开子菜单*/
+
+    function dropdownOpen() {
+
+        var $dropdownLi = $('li.dropdown');
+
+        $dropdownLi.mouseover(function() {
+            $(this).addClass('open');
+        }).mouseout(function() {
+            $(this).removeClass('open');
+        });
+    };
+    getgonggao();
+    getxinwen();
+</script>
+</body>
+</html>
