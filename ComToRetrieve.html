@@ -55,7 +55,7 @@
 <body>
 <div>
 
-    <div class="col-lg-12 col-md-12 container">
+    <div class="col-lg-12 col-md-12 container nopadding">
 
 
         <!--查询条件-->
@@ -113,7 +113,6 @@
                     <td>简介</td>
                     <td>申请</td>
                 </tr>
-                <!--
                 <tr class = "bb">
                     <td>社团名称</td>
                     <td>类别</td>
@@ -122,15 +121,7 @@
                     <td>简介</td>
                     <td><a class="globalLoginBtn">申请</a></td>
                 </tr>
-                <tr class = "bb">
-                    <td>社团名称</td>
-                    <td>类别</td>
-                    <td>挂靠单位</td>
-                    <td>建团时间</td>
-                    <td>简介</td>
-                    <td><a class="globalLoginBtn">申请</a></td>
-                </tr>
-                -->
+
             </table>
             <table id="table pagination" class="table table-bordered">
                 <tr>
@@ -161,25 +152,29 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">登录</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">申请人信息</h4>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="username">用户名</label>
-                            <input type="text" class="form-control" id="username" placeholder="username">
+                            <label for="st_id">学号</label>
+                            <input type="text" class="form-control" id="st_id" placeholder="请输入学号">
                         </div>
                         <div class="form-group">
-                            <label for="password">密码</label>
-                            <input type="password" class="form-control" id="password" placeholder="password">
+                            <label for="username">姓名</label>
+                            <input type="text" class="form-control" id="username" placeholder="请填写姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="introduction">个人介绍</label>
+                            <textarea rows="10" class="form-control" id="introduction" style="text-align: justify;"></textarea>
                         </div>
                     </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">登录</button>
+                    <button type="button" class="btn btn-primary">提交申请</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

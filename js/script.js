@@ -4,8 +4,7 @@ function login_popup() {
 
 $(".globalLoginBtn").on("click", login_popup),function() {
     var e = [];
-    $(".modal").on("show.bs.modal",
-    function() {
+    $(".modal").on("show.bs.modal", function() {
         for (var s = 0; e.length > s; s++) e[s] && (e[s].modal("hide"), e[s] = null);
         e.push($(this));
         var o = $(this),

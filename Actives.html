@@ -8,7 +8,7 @@
 
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./static/js/common/basePath.js"></script>
+	<script type="text/javascript" src="./static/js/common/basePath.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/nav.css"/>
     <title>社团活动</title>
@@ -39,78 +39,96 @@
         line-height: 30px;
         margin-bottom: 5px;
     }
-    .formtable{
-        width: 100%;
-    }
-    .formtable th{
-        font-size: 14px;
-        line-height: 40px;
-        width: 50%;
-        font-weight: bold;
-        text-align: right;
-        padding-right: 10px;
-    }
 </style>
 <body>
 <div >
-    <div class="col-lg-12 col-md-12 container">
+    <div class="col-lg-12 col-md-12 container nopadding">
         <div class="col-md-12 col-lg-12 nopadding" style="margin-top: 10px;">
-            <!--活动-->
             <div class="tab-content col-lg-12 col-md-12 nopadding" style="margin-top: 5px;">
 
                 <!--活动信息-->
-                <div class="tab-pane col-lg-12 col-md-12 nopadding active" id="hdxx" style="margin-bottom: 0px;">
-                    <form action="">
-                        <!--xxx活动-->
-                        <div class="col-lg-12 col-md-12 nopadding">
-                            <hr>
+                <div class="tab-pane col-lg-12 col-md-12 nopadding active"  style="margin-bottom: 0px;">
+                    <div class="col-lg-12 col-md-12 nopadding"><hr></div>
+                    <div class="col-lg-12 col-md-12 ">
+                        <div class="col-lg-4 col-md-4 "></div>
+                        <div class="col-lg-4 col-md-4 ">
+                            <!--活动主题-->
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <div class="col-lg-4 col-md-4 nopadding" >
+                                <p><strong>活动主题</strong></p>
+                            </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="theme"></p>
+                                </div>
+                            </div>
+                            <!--学院-->
+                            <div class="col-lg-12 col-md-12 nopadding" >
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>学院</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="collegeName"></p>
+                                </div>
+                            </div>
+                            <!--组织社团-->
+                            <div class="col-lg-12 col-md-12 nopadding" >
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>组织社团</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center" >
+                                    <p id="communityName"></p>
+                                </div>
+                            </div>
+                            <!--活动时间-->
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>活动时间</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="startTime"></p>
+                                </div>
+                            </div>
+                            <!--活动地点-->
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>活动地点</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="loca"></p>
+                                </div>
+                            </div>
+                            <!--负责人-->
+                            <div class="col-lg-12 col-md-12 nopadding" >
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>负责人</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="createBy"></p>
+                                </div>
+                            </div>
+                            <!--负责人手机-->
+                            <div class="col-lg-12 col-md-12 nopadding" >
+                                <div class="col-lg-4 col-md-4 nopadding">
+                                    <p><strong>负责人手机</strong></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8 nopadding" style="text-align: center">
+                                    <p id="tel"></p>
+                                </div>
+                            </div>
+                            <!--活动内容-->
+                            <div class="col-lg-12 col-md-12 nopadding" >
+                                <p><strong>活动内容</strong></p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 nopadding">
+                                <p style="text-align: justify" id="content"></p>
+                            </div>
+                            <!--关闭-->
+                            <div class="col-lg-12 col-md-12 nopadding" style="text-align: center">
+                                <input class="btn-danger" type="button" onclick="window.close();" value="关闭" style="width: 80px;height: 30px;border-radius: 3px">
+                            </div>
                         </div>
-                        <table class="col-lg-12 col-md-12 nopadding formtable">
-                            <tr>
-                                <th>活动主题</th>
-                                <td id="theme"></td>
-                            </tr>
-                            <tr>
-                                <th>学院</th>
-                                <td id="collegeName"></td>
-                            </tr>
-                            <tr>
-                                <th>组织社团</th>
-                                <td id="communityName"></td>
-                            </tr>
-                            <tr>
-                                <th>活动时间</th>
-                                <td id="startTime"></td>
-                            </tr>
-                            <tr>
-                                <th>活动地点</th>
-                                <td id="loca"></td>
-                            </tr>
-                            <tr>
-                                <th>负责人</th>
-                                <td id="createBy"></td>
-                            </tr>
-                            <tr>
-                                <th>负责人手机</th>
-                                <td id="tel"></td>
-                            </tr>
-                            <tr>
-                                <th valign="top">活动内容</th>
-                                <td id="content">
-                                    <!--
-                                    <p><span class="glyphicon glyphicon-erase"></span><strong>活动背景</strong></p>
-                                    <p>xxxx</p>
-                                    <p><span class="glyphicon glyphicon-erase"></span><strong>活动目的</strong></p>
-                                    <p>xxxx</p>-->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" style="width: 40%">
-                                    <input class="btn-danger" type="button"  onclick="window.close();" value="关闭" style="width: 80px;height: 30px;border-radius: 3px">
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                        <div class="col-lg-4 col-md-4 "></div>
+                    </div>
 
                 </div>
             </div>
@@ -126,6 +144,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>
@@ -149,7 +168,7 @@
             $(this).removeClass('open');
         });
     }
-    function getActivesDetail(){
+	function getActivesDetail(){
         var url = window.location + "";
         var ActiveId = url.substring(url.indexOf("ActiveId=") + 9);
         $.ajax({
